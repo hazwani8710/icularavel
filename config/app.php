@@ -18,6 +18,8 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'nama' => 'ICU Laravel Team',
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
