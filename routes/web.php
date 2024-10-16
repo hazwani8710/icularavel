@@ -23,8 +23,6 @@ Route::get('/home', function () {
 })->name('home');
 
 
-
-
 Route::get('/home/{name}', function ($name) {
     return view('home', ['name'=> $name]);
 });
@@ -36,6 +34,10 @@ Route::get('/about', function () {
 Route::get('/auth/signin', function () {
     return view('auth.signin');
 });
+
+
+
+
 
 // Route Param
 // Route::get('/user/{name}/{age}', function ($name, $age) {
@@ -87,3 +89,6 @@ Route::name('job')->prefix('job')->group(function() {
     })->name('.description');
 
 });
+
+
+require __DIR__.'/feed/web.php';
