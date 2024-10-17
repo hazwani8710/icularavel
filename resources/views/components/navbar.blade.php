@@ -18,14 +18,35 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
+
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('about') }}">About</a>
               </li>
-              
+              {{-- <li class="nav-item">
+              <a class="nav-link" href="{{ route('auth.signout') }}">Log Out</a>
+              </li> --}}
             </ul>
+            
+            {{-- Sign out button at far right --}}
+            <ul class="navbar-nav ms-auto">
+              @auth
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ route('auth.signout') }}">Log Out</a>
+              </li>
+              @endauth
+              @guest
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('auth.signin') }}">Log In</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" href="{{ route('auth.signup') }}">Sign Up</a>
+              </li>
+              @endguest
+            </ul>
+
           </div>
         </div>
       </nav>

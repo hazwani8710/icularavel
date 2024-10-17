@@ -35,7 +35,9 @@ Route::get('/auth/signin', function () {
     return view('auth.signin');
 });
 
-
+Route::get('/auth/signup', function () {
+    return view('auth.signup');
+});
 
 
 
@@ -92,3 +94,4 @@ Route::name('job')->prefix('job')->group(function() {
 
 
 require __DIR__.'/feed/web.php';
+require __DIR__.'/auth/web.php';
