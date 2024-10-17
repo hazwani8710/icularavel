@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AiController;
 use FastRoute\Route as FastRouteRoute;
 use Illuminate\Support\Facades\Route;
 
@@ -91,6 +92,8 @@ Route::name('job')->prefix('job')->group(function() {
     })->name('.description');
 
 });
+
+Route::get('/ai/feed', [AiController::class, 'generateAiPage'])->name('ai.feed');
 
 
 require __DIR__.'/feed/web.php';

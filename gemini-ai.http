@@ -1,0 +1,17 @@
+POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyDIGK0Ssm0gj1EEyKGrp9VIouhr6nZI3HY HTTP/1.1
+Content-Type: application/json
+# Authorization: token xxx
+
+
+{"contents":[
+    {"parts":[
+        {
+            "text":"siapa perdana menteri malaysia"
+        }
+            ]
+    }
+]
+}
+
+# GET http://localhost/api/user HTTP/1.1
+# Content-Type: application/json
